@@ -8,7 +8,9 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserForm
@@ -54,15 +56,33 @@ class UserForm
                         FileUpload::make('ktp_path')
                             ->label('Foto KTP')
                             ->image()
+                            ->live()
+                            ->imageEditor()
+                            ->maxSize(2048)
+                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/jpg'])
+                            ->validationMessages([
+                                'max' => 'Ukuran foto KTP terlalu besar, maksimal 2MB.',
+                                'accepted_file_types' => 'Format harus JPG atau PNG.',
+                            ])
                             ->directory('identitas-ktp')
-                            ->visibility('public')
+                            ->visibility('private')
+                            ->getUploadedFileNameForStorageUsing(function ($file) {
+                                return "ktp-" . Auth::id() . "-" . time() . "." . $file->getClientOriginalExtension();
+                            })
+                            ->afterStateUpdated(function (Set $set) {
+                                $set('is_verified', false);
+                            })
+                            ->previewable(true)
+                            ->downloadable()
                             ->columnSpan(1),
 
                         FileUpload::make('sim_path')
                             ->label('Foto SIM C')
                             ->image()
+                            ->maxSize(2048)
                             ->directory('identitas-sim')
-                            ->columnSpan(1),
+                            ->visibility('private')
+                            ->helperText('Pastikan masa berlaku SIM masih aktif.'),
 
                         Toggle::make('is_verified')
                             ->label('Verifikasi Identitas User')

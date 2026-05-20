@@ -14,8 +14,7 @@ class RentalForm
 {
     public static function configure($schema)
     {
-        // Kita gunakan ->columns(3) langsung pada schema utama
-        // Ini akan membagi form menjadi 3 kolom tanpa butuh class Grid
+    
         return $schema
             ->columns(3)
             ->components([

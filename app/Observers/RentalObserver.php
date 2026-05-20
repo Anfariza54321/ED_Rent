@@ -44,7 +44,6 @@ class RentalObserver
      */
     public function deleted(Rental $rental): void
     {
-        // Jika data rental dihapus, kembalikan status motor menjadi tersedia
         $rental->motor->update(['status' => 'tersedia']);
     }
 

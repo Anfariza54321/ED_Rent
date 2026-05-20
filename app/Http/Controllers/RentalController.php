@@ -10,9 +10,20 @@ use Illuminate\Support\Facades\Auth;
 
 class RentalController extends Controller
 {
+
+    public function index()
+    {
+        if (Auth::user()->role === 'admin') {
+            return redirect('/admin');
+        }
+
+        $rentals = Rental::where('user_id', Auth::id())->with('motor')->latest()->get();
+
+        return view('customer.rentals.index', compact('rentals'));
+    }
+
     public function checkout(Motor $motor)
     {
-        
         if ($motor->status !== 'tersedia') {
             return redirect()->back()->with('error', 'Motor ini sedang tidak tersedia.');
         }

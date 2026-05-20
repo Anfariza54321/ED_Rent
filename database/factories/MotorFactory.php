@@ -44,7 +44,7 @@ class MotorFactory extends Factory
         return [
             'category_id' => $category->id,
             'slug' => Str::slug($units['brand'] . '-' . $units['model'] . '-' . Str::random(5)),
-            'image' => 'motor-' . fake()->numberBetween(1, 15) . '.jpg',
+            'image' => 'motors/motor-' . fake()->numberBetween(1, 7) . '.webp',
             'brand' => $units['brand'],
             'model' => $units['model'],
             'plate_nomor' => fake()->randomElement(['B', 'D', 'AB', 'DK', 'L', 'K', 'AB']) . ' ' . fake()->numberBetween(1000, 9999) . ' ' . strToUpper(fake()->bothify('??')),
