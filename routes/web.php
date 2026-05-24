@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\MotorController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RentalController;
 use App\Models\Rental;
@@ -10,9 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 Route::get('/', [LandingPageController::class, 'index'])->name('home');
 
-Route::get('/catalog', function () {
-    return view('catalog');
-})->name('catalog');
+Route::get('/catalog', [MotorController::class, 'index'])->name('catalog');
 
 Route::get('/booking', function () {
     return view('booking');

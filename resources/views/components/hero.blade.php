@@ -1,4 +1,4 @@
-<header class="hero-section">
+<header class="hero-section" style='background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25)), url("/storage/images/bg-kudabesirent.webp");'>
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-7 text-center text-lg-start">

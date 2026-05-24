@@ -31,7 +31,7 @@
                     <div class="card-body p-4 d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex justify-content-between align-items-center mb-1">
-                                <span class="text-muted text-uppercase tracking-wider font-monospace"
+                                <span class="text-muted text-uppercase tracking-wider font-sans-serif"
                                     style="font-size: 0.75rem; letter-spacing: 1px;">
                                     {{ $motor->brand }}
                                 </span>
@@ -51,12 +51,12 @@
                             <div
                                 class="row g-2 text-secondary small mb-3 border-top border-bottom py-3 my-2 bg-light bg-opacity-50 rounded-3 px-1">
                                 <div class="col-6 d-flex align-items-center gap-2">
-                                    <i class="bi bi-lightning-charge-fill text-warning fs-6"></i>
+                                    <i class="bi bi-lightning-charge-fill text-carbon fs-6"></i>
                                     <span
                                         class="text-dark-emphasis fw-medium">{{ $motor->specification->kapasitas_mesin ?? '150 cc' }}</span>
                                 </div>
                                 <div class="col-6 d-flex align-items-center gap-2">
-                                    <i class="bi bi-gear-fill text-primary fs-6"></i>
+                                    <i class="bi bi-gear-fill text-carbon fs-6"></i>
                                     <span
                                         class="text-dark-emphasis fw-medium text-truncate">{{ $motor->specification->transmisi ?? 'Manual' }}</span>
                                 </div>
@@ -67,7 +67,7 @@
                             <div class="d-flex justify-content-between align-items-baseline mb-3">
                                 <span class="text-muted small">Harga Sewa</span>
                                 <div class="text-end">
-                                    <span class="text-dark fw-black fs-4 font-monospace">
+                                    <span class="text-dark fw-black fs-4 font-sans-serif">
                                         Rp{{ number_format($motor->harga_per_hari, 0, ',', '.') }}
                                     </span>
                                     <span class="text-muted small fw-normal">/hari</span>

@@ -13,9 +13,7 @@ return new class extends Migration
     {
         Schema::create('motor_specifications', function (Blueprint $table) {
             $table->id();
-            // Menghubungkan ke tabel motors
-            $table->foreignId('motor_id')->constrained('motors')->onDelete('cascade');
-
+            $table->string('model_name')->unique();
             $table->string('kapasitas_mesin');        
             $table->string('konfigurasi_silinder');  
             $table->string('transmisi');             

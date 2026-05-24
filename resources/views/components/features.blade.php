@@ -14,7 +14,7 @@
             <!-- Langkah 1 -->
             <div class="col-md-4" data-aos="fade-up" data-aos-duration="600">
                 <div class="p-4 bg-light bg-opacity-50 rounded-4 border h-100 feature-card d-flex flex-column justify-content-center">
-                    <div class="icon-wrapper mb-3 text-warning">
+                    <div class="icon-wrapper mb-3 text-carbon">
                         <i class="bi bi-bicycle display-3 d-inline-block" data-aos="fade-right" data-aos-duration="600"></i>
                     </div>
                     <h5 class="fw-bold text-carbon mb-2">1. Pilih & Tentukan Jadwal</h5>
@@ -27,7 +27,7 @@
             <!-- Langkah 2 (Disesuaikan menjadi Verifikasi/COD karena tanpa Payment Gateway) -->
             <div class="col-md-4" data-aos="fade-up" data-aos-duration="600">
                 <div class="p-4 bg-light bg-opacity-50 rounded-4 border h-100 feature-card d-flex flex-column justify-content-center">
-                    <div class="icon-wrapper mb-3 text-primary">
+                    <div class="icon-wrapper mb-3 text-carbon">
                         <i class="bi bi-person-check-fill display-3 d-inline-block" data-aos="fade-right" data-aos-duration="600"></i>
                     </div>
                     <h5 class="fw-bold text-carbon mb-2">2. Verifikasi Data Cepat</h5>
@@ -40,7 +40,7 @@
             <!-- Langkah 3 -->
             <div class="col-md-4" data-aos="fade-up" data-aos-duration="600">
                 <div class="p-4 bg-light bg-opacity-50 rounded-4 border h-100 feature-card d-flex flex-column justify-content-center">
-                    <div class="icon-wrapper mb-3 text-success">
+                    <div class="icon-wrapper mb-3 text-carbon">
                         <i class="bi bi-key-fill display-3 d-inline-block" data-aos="fade-right" data-aos-duration="600"></i>
                     </div>
                     <h5 class="fw-bold text-carbon mb-2">3. Ambil Unit & Bayar COD</h5>

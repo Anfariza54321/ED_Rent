@@ -33,6 +33,6 @@ class Motor extends Model
 
     public function specification()
     {
-        return $this->hasOne(MotorSpecification::class);
+        return $this->belongsTo(MotorSpecification::class, 'specification_id');
     }
 }
