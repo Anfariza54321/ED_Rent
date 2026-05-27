@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 
 class Motor extends Model
 {
-    protected $fillable = ['category_id', 'image', 'brand', 'model', 'plate_nomor', 'harga_per_hari', 'status'];
+    protected $fillable = ['category_id', 'specification_id', 'image', 'brand', 'model', 'plate_nomor', 'harga_per_hari', 'status'];
     use HasFactory;
     use SoftDeletes;
     

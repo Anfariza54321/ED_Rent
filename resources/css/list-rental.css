@@ -1,0 +1,261 @@
+/* ORDERS HEADER STYLE */
+.orders-header {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    padding: 60px 0 40px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.text-carbon {
+    color: #1f2937;
+}
+
+.fw-extrabold {
+    font-weight: 800;
+}
+
+/* FILTER BAR STYLE */
+.filter-container {
+    margin-top: -25px;
+    position: relative;
+    z-index: 10;
+}
+
+.filter-card {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.filter-pill {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid transparent;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.filter-pill:hover {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+.filter-pill.active {
+    background-color: #1f2937;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(31, 41, 55, 0.15);
+}
+
+/* ORDER CARD CLEAN STYLE */
+.order-card-clean {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: all 0.25s ease-in-out;
+}
+
+.order-card-clean:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    border-color: #d1d5db;
+}
+
+/* Wrapper Gambar Motor */
+.order-img-wrapper {
+    width: 110px;
+    height: 85px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f8fafc;
+    border: 1px solid #f1f5f9;
+}
+
+.order-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BADGE STATUS BAGES */
+.badge-status-waiting {
+    background-color: #fef3c7;
+    color: #d97706;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #fde68a;
+}
+
+/* 2. Status Aktif/Berjalan (Biru Lembut) */
+.badge-status-active {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #bae6fd;
+}
+
+/* 3. Status Selesai (Hijau Lembut) */
+.badge-status-completed {
+    background-color: #dcfce7;
+    color: #15803d;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #bbf7d0;
+}
+
+/* SOFT UTILITIES */
+.bg-light-soft {
+    background-color: #f8fafc;
+}
+
+.btn-carbon {
+    background-color: #1f2937;
+    color: #ffffff;
+    border: 1px solid #1f2937;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-carbon:hover {
+    background-color: #111827;
+    color: #ffffff;
+    border-color: #111827;
+    box-shadow: 0 4px 12px rgba(31, 41, 55, 0.2);
+}
+
+/* - Custom Pagination - */
+.custom-pagination .pagination {
+    gap: 6px;
+}
+
+.custom-pagination .page-item .page-link {
+    color: #4b5563;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px !important;
+    padding: 10px 16px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.custom-pagination .page-item .page-link:hover {
+    color: #ffffff;
+    background-color: #1f2937;
+    border-color: #1f2937;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(31, 41, 55, 0.15);
+}
+
+.custom-pagination .page-item.active .page-link {
+    color: #ffffff !important;
+    background-color: #111827;
+    border-color: #111827;
+    box-shadow: 0 4px 12px rgba(17, 24, 39, 0.2);
+}
+
+.custom-pagination .page-item.disabled .page-link {
+    color: #9ca3af;
+    background-color: #f9fafb;
+    border-color: #f3f4f6;
+    transform: none;
+    box-shadow: none;
+}
+
+.custom-pagination .page-link aria-hidden {
+    font-weight: bold;
+}
+
+/* MODAL CUSTOM STYLE */
+.modal-content-custom {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.border-end-md {
+    @media (min-width: 768px) {
+        border-right: 1px solid #f1f5f9;
+    }
+}
+
+/* TIMELINE TRACKING SYSTEM */
+.timeline-step {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 25px;
+}
+
+.timeline-step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 30px;
+    bottom: -20px;
+    width: 2px;
+    background-color: #e2e8f0;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.modal-content-custom {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    max-height: 92vh;
+}
+
+@media (max-width: 767.98px) {
+    .border-end-md {
+        border-right: none !important;
+        border-bottom: 1px solid #f1f5f9;
+        padding-bottom: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .modal-body.p-4 {
+        padding: 1.25rem !important;
+    }
+
+    .modal-body [style*="height: 200px"],
+    .modal-body [style*="height: 210px"] {
+        height: 160px !important;
+    }
+}
+
+.modal {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}

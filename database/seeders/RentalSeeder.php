@@ -8,6 +8,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class RentalSeeder extends Seeder
 {
@@ -26,7 +27,7 @@ class RentalSeeder extends Seeder
             $durasi = rand(1, 5);
             $rencanaKembali = (clone $mulai)->addDays($durasi);
 
-            $statusOptions = ['selesai', 'selesai', 'selesai', 'dipesan', 'dibatalkan'];
+            $statusOptions = ['Selesai', 'Selesai', 'Selesai', 'Disewa', 'Menunggu'];
             $status = $statusOptions[array_rand($statusOptions)];
 
             $pengembalian = ($status === 'selesai') ? $rencanaKembali : null;
@@ -36,6 +37,7 @@ class RentalSeeder extends Seeder
             Rental::create([
                 'user_id' => $userIds[array_rand($userIds)],
                 'motor_id' => $motorIds[array_rand($motorIds)],
+                'kode_booking' => 'KBR-' . date('ymd') . '-' . strtoupper(Str::random(4)),
                 'tanggal_mulai' => $mulai,
                 'tanggal_rencana_kembali' => $rencanaKembali,
                 'tanggal_pengembalian' => $pengembalian,
