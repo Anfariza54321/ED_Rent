@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class MotorSpecification extends Model
 {
     protected $fillable = [
-        'motor_id',
         'kapasitas_mesin',
         'konfigurasi_silinder',
         'transmisi',
@@ -16,8 +15,8 @@ class MotorSpecification extends Model
         'tenaga_maksimum',
     ];
 
-    public function motor()
+    public function motors()
     {
-        return $this->belongsTo(Motor::class);
+        return $this->hasMany(Motor::class, 'specification_id');
     }
 }

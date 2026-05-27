@@ -24,7 +24,7 @@
                     <p class="text-white-50 mb-4 col-md-8 d-none d-md-block small lh-relaxed">
                         Rasakan sensasi berkendara akhir pekan dengan performa mesin multi-silinder premium yang telah diservis presisi oleh tim mekanik profesional kami.
                     </p>
-                    <a href="#terpopuler" class="btn btn-light hover-lift rounded-pill px-4 py-2 small fw-bold text-dark shadow-sm">
+                    <a href="{{ route('catalog') }}" class="btn btn-light hover-lift rounded-pill px-4 py-2 small fw-bold text-dark shadow-sm">
                         Pilih Motor Fairing <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                 </div>
@@ -39,7 +39,7 @@
                     <p class="text-white-50 mb-4 col-md-8 d-none d-md-block small lh-relaxed">
                         Taklukkan padatnya aktivitas kota dengan jajaran skuter matik premium kami yang lincah, bersih, dan sangat efisien.
                     </p>
-                    <a href="#terpopuler" class="btn btn-light hover-lift rounded-pill px-4 py-2 small fw-bold text-dark shadow-sm">
+                    <a href="{{ route('catalog') }}" class="btn btn-light hover-lift rounded-pill px-4 py-2 small fw-bold text-dark shadow-sm">
                         Eksplor Skuter Matik <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                 </div>
@@ -54,7 +54,7 @@
                     <p class="text-white-50 mb-4 col-md-8 d-none d-md-block small lh-relaxed">
                         Nikmati posisi berkendara tegap yang ergonomis serta respon torsi instan dari lini Naked Bike agresif kami.
                     </p>
-                    <a href="#terpopuler" class="btn btn-light hover-lift rounded-pill px-4 py-2 small fw-bold text-dark shadow-sm">
+                    <a href="{{ route('catalog') }}" class="btn btn-light hover-lift rounded-pill px-4 py-2 small fw-bold text-dark shadow-sm">
                         Sewa Naked Bike <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                 </div>
@@ -69,7 +69,7 @@
                     <p class="text-white-50 mb-4 col-md-8 d-none d-md-block small lh-relaxed">
                         Pilihan paling rasional untuk mobilitas praktis harian. Tangguh di segala cuaca dan konsumsi bahan bakar paling hemat.
                     </p>
-                    <a href="#terpopuler" class="btn btn-light hover-lift rounded-pill px-4 py-2 small fw-bold text-dark shadow-sm">
+                    <a href="{{ route('catalog') }}" class="btn btn-light hover-lift rounded-pill px-4 py-2 small fw-bold text-dark shadow-sm">
                         Lihat Motor Bebek <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                 </div>
@@ -84,7 +84,7 @@
                     <p class="text-white-50 mb-4 col-md-8 d-none d-md-block small lh-relaxed">
                         Jelajahi keindahan alam atau rute menantang dengan dukungan suspensi travel tinggi dan ban pacul yang siap tempur.
                     </p>
-                    <a href="#terpopuler" class="btn btn-light hover-lift rounded-pill px-4 py-2 small fw-bold text-dark shadow-sm">
+                    <a href="{{ route('catalog') }}" class="btn btn-light hover-lift rounded-pill px-4 py-2 small fw-bold text-dark shadow-sm">
                         Mulai Petualangan <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                 </div>
