@@ -42,15 +42,15 @@ class MotorsTable
                     ->color(
                         fn(string $state): string => match ($state) {
                             'tersedia' => 'success',
-                            'perawatan' => 'danger',
-                            'dipesan' => 'warning',
+                            'Perawatan' => 'danger',
+                            'Disewa' => 'warning',
                             default => 'info',
                         }
                     )
                     ->icon(fn(string $state): string => match ($state) {
                         'tersedia' => 'heroicon-m-check-circle',
-                        'perawatan' => 'heroicon-m-wrench',
-                        'dipesan' => 'heroicon-m-no-symbol',
+                        'Perawatan' => 'heroicon-m-wrench',
+                        'Disewa' => 'heroicon-m-no-symbol',
                         default => 'heroicon-m-question-mark-circle',
                     })
                     ->sortable(),

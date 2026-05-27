@@ -12,7 +12,7 @@
 
                     <div class="motor-img-container position-relative overflow-hidden"
                         style="height: 180px; width: 100%;">
-                        @if ($motor->status)
+                        @if ( $motor->status === 'Tersedia')
                             <span
                                 class="badge-status position-absolute top-3 inset-s-3 z-3 bg-success text-white px-2.5 py-1 rounded-pill small fw-bold tracking-wide shadow-sm"
                                 style="font-size: 0.75rem;">
@@ -22,7 +22,7 @@
                             <span
                                 class="badge-status position-absolute top-3 inset-s-3 z-3 bg-danger text-white px-2.5 py-1 rounded-pill small fw-bold tracking-wide shadow-sm"
                                 style="font-size: 0.75rem;">
-                                disewa
+                                Disewa
                             </span>
                         @endif
 

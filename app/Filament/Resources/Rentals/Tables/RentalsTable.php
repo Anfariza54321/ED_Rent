@@ -21,6 +21,8 @@ class RentalsTable
                 TextColumn::make('motor_id')
                     ->numeric()
                     ->sortable(),
+                TextColumn::make('kode_booking')
+                    ->sortable(),
                 TextColumn::make('tanggal_mulai')
                     ->date()
                     ->sortable(),
@@ -31,26 +33,28 @@ class RentalsTable
                     ->date()
                     ->sortable(),
                 TextColumn::make('total_harga')
+                    ->money('idr')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('penalty')
+                    ->money('idr')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('status')
                     ->badge()
                     ->color(
                         fn(string $state): string => match ($state) {
-                            'selesai' => 'success',
-                            'dipesan' => 'warning',
-                            'dibatalkan' => 'danger',
+                            'Selesai' => 'success',
+                            'Disewa' => 'warning',
+                            'Menunggu' => 'primary',
                             default => 'info',
                         }
                     )
                     ->icon(fn(string $state): string => match ($state) {
-                        'selesai' => 'heroicon-m-check-circle',
-                        'dipesan' => 'heroicon-m-clock',
-                        'dibatalkan' => 'heroicon-m-x-circle',
-                        default => 'heroicon-m-question-mark-circle',
+                        'Selesai'    => 'heroicon-m-check-circle',
+                        'Disewa'     => 'heroicon-m-clock',
+                        'Menunggu'   => 'heroicon-m-x-circle',
+                        default      => 'heroicon-m-question-mark-circle',
                     })
                     ->sortable(),
                 ImageColumn::make('payment_proof')
@@ -77,6 +81,6 @@ class RentalsTable
                     DeleteBulkAction::make(),
                 ]),
             ])
-            ;
+        ;
     }
 }

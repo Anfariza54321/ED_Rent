@@ -1,7 +1,7 @@
 <footer class="bg-carbon text-white pt-5 pb-4 border-top border-secondary border-opacity-10">
     <div class="container">
         <div class="row g-4 mb-5">
-            <div class="col-md-4" data-aos="fade-up" data-aos-duration="600">
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" data-aos-offset="0">
                 <h5 class="fw-extrabold text-white mb-3 tracking-tight">
                     KUDA<span class="text-titanium fw-light">BESI</span>RENT
                 </h5>
@@ -10,7 +10,7 @@
                 </p>
             </div>
             
-            <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150" data-aos-anchor-placement="top-bottom" data-aos-offset="0">
                 <h6 class="fw-bold text-titanium text-uppercase tracking-wider small mb-3">Kontak Layanan</h6>
                 <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
                     <li class="d-flex align-items-start gap-2">
@@ -30,7 +30,7 @@
                 </ul>
             </div>
             
-            <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" data-aos-anchor-placement="top-bottom" data-aos-offset="0">
                 <h6 class="fw-bold text-titanium text-uppercase tracking-wider small mb-3">Ikuti Kami</h6>
                 <p class="text-secondary small mb-3">Dapatkan informasi unit terbaru dan promo menarik melalui media sosial resmi kami.</p>
                 <div class="d-flex gap-2">

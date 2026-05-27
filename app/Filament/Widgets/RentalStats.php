@@ -17,12 +17,12 @@ class RentalStats extends StatsOverviewWidget
                 ->descriptionIcon('heroicon-m-banknotes')
                 ->color('success'),
 
-            Stat::make('Motor Tersedia', Motor::where('status', 'tersedia')->count())
+            Stat::make('Motor Tersedia', Motor::where('status', 'Tersedia')->count())
                 ->description('Motor siap disewakan')
                 ->descriptionIcon('heroicon-m-check-circle')
                 ->color('info'),
 
-            Stat::make('Rental Aktif', Rental::where('status', 'dipesan')->count())
+            Stat::make('Rental Aktif', Rental::where('status', 'Disewa')->count())
                 ->description('Transaksi yang sedang berjalan')
                 ->descriptionIcon('heroicon-m-arrow-path')
                 ->color('warning'),

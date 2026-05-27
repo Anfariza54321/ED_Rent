@@ -15,12 +15,13 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('motor_id')->constrained('motors')->onDelete('cascade');
+            $table->string('kode_booking')->unique();
             $table->date('tanggal_mulai');
             $table->date('tanggal_rencana_kembali');
             $table->date('tanggal_pengembalian')->nullable();
             $table->integer('total_harga')->default(0);
             $table->integer('penalty')->default(0);
-            $table->enum('status', ['dipesan','tersedia', 'selesai', 'dibatalkan'])->default('tersedia');
+            $table->enum('status', ['Disewa','Menunggu', 'Selesai'])->default('Disewa');
             $table->timestamps();
         });
     }

@@ -13,9 +13,7 @@ Route::get('/', [LandingPageController::class, 'index'])->name('home');
 
 Route::get('/catalog', [MotorController::class, 'index'])->name('catalog');
 
-Route::get('/booking', function () {
-    return view('booking');
-})->name('booking');
+Route::get('/booking', [RentalController::class, 'index'])->name('booking');
 
 Route::middleware(['auth'])->group(function () {
     

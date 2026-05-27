@@ -11,15 +11,33 @@ use Illuminate\Support\Facades\Auth;
 class RentalController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        if (Auth::user()->role === 'admin') {
-            return redirect('/admin');
+        // if (Auth::user()->role === 'admin') {
+        //     return redirect('/admin');
+        // }
+        $userId = Auth::id();
+
+        $rentals = Rental::where('user_id', Auth::id())->with('motor')->latest()->paginate(10);
+
+        $allUserOrders = Rental::where('user_id', $userId)->get();
+
+        $counts = [
+            'all'       => $allUserOrders->count(),
+            'Menunggu'   => $allUserOrders->where('status', 'Menunggu')->count(),
+            'Disewa'    => $allUserOrders->where('status', 'Disewa')->count(),
+            'Selesai' => $allUserOrders->where('status', 'Selesai')->count(),
+        ];
+
+        $query = Rental::with('motor')->where('user_id', $userId);
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
         }
 
-        $rentals = Rental::where('user_id', Auth::id())->with('motor')->latest()->get();
+        $rentals = $query->latest()->paginate(10);
 
-        return view('customer.rentals.index', compact('rentals'));
+        return view('list-rental', compact('rentals', 'counts'));
     }
 
     public function checkout(Motor $motor)

@@ -9,12 +9,13 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Str;
 
 class RentalForm
 {
     public static function configure($schema)
     {
-    
+
         return $schema
             ->columns(3)
             ->components([
@@ -23,7 +24,7 @@ class RentalForm
                     ->relationship('user', 'name')
                     ->searchable()
                     ->required()
-                    ->columnSpan(2), 
+                    ->columnSpan(2),
 
                 TextInput::make('total_harga')
                     ->label('Total Bayar')
@@ -31,7 +32,7 @@ class RentalForm
                     ->prefix('Rp')
                     ->readOnly()
                     ->dehydrated()
-                    ->columnSpan(1), 
+                    ->columnSpan(1),
 
                 Select::make('motor_id')
                     ->relationship(
@@ -71,10 +72,9 @@ class RentalForm
 
                 Select::make('status')
                     ->options([
-                        'tersedia' => 'Tersedia',
-                        'dipesan' => 'Dipesan',
-                        'selesai' => 'Selesai',
-                        'dibatalkan' => 'Dibatalkan',
+                        'Disewa' => 'Disewa',
+                        'Selesai' => 'Selesai',
+                        'Menunggu' => 'Menunggu',
                     ])
                     ->required()
                     ->columnSpan(1),
@@ -87,12 +87,20 @@ class RentalForm
 
                 FileUpload::make('payment_proof')
                     ->label('Bukti Pembayaran')
-                    ->image() 
+                    ->image()
                     ->directory('payment-proofs')
                     ->visibility('public')
                     ->openable()
                     ->downloadable()
                     ->helperText('Unggah struk transfer bank atau bukti bayar lainnya.'),
+
+                TextInput::make('kode_booking')
+                    ->label('Kode Booking')
+                    ->default(fn() => 'KBR-' . date('ymd') . '-' . strtoupper(Str::random(4)))
+                    ->disabled()
+                    ->dehydrated()
+                    ->required()
+                    ->unique(ignoreRecord: true),
             ]);
     }
 
@@ -118,7 +126,7 @@ class RentalForm
                 $kembaliAsli = Carbon::parse($tglKembaliAsli);
                 if ($kembaliAsli->greaterThan($rencanaKembali)) {
                     $hariTerlambat = $rencanaKembali->diffInDays($kembaliAsli);
-                    $penalty = $hariTerlambat * 50000; // Contoh denda
+                    $penalty = $hariTerlambat * 50000;
                 }
             }
 

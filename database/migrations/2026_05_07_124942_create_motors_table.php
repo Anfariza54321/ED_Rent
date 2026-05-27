@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('motors', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
-            $table->foreignId('specification_id')->nullable()->constrained('motor_specifications')->onDelete('cascade');
+            $table->foreignId('specification_id')->constrained('motor_specifications')->onDelete('cascade');
             $table->string('image')->nullable();
             $table->string('brand');
             $table->string('model');
             $table->string('plate_nomor')->unique();
             $table->integer('harga_per_hari');
-            $table->enum('status', ['tersedia','perawatan', 'dipesan'])->default('tersedia');
+            $table->enum('status', ['Tersedia','Perawatan', 'Dipesan'])->default('Tersedia');
             $table->timestamps();
             $table->softDeletes();
         });
